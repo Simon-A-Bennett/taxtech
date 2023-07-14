@@ -1,0 +1,24 @@
+{
+  "testimonials": [
+    {
+      "id": 0,
+      "timestamp": "Wed Jul 12 2023 16:52:29 GMT+0100",
+      "text": "Excellent service, the staff were really helpful and were always on hand to answer my questions"
+    },
+    {
+      "id": 1,
+      "timestamp": "Wed Jul 12 2023 16:52:29 GMT+0100",
+      "text": "Very pleased with the service, I would definitely recommend "
+    },
+    {
+      "id": 2,
+      "timestamp": "Wed Jul 12 2023 16:52:29 GMT+0100",
+      "text": "From all of us here at example.com, thank you 🙋‍♀️"
+    },
+    {
+      "id": 3,
+      "timestamp": "Wed Jul 12 2023 16:52:29 GMT+0100",
+      "text": "Just what our company needed"
+    }
+  ]
+}
