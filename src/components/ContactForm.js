@@ -17,7 +17,7 @@ const ContactForm = () => {
           <label htmlFor='message' />
           <textarea placeholder='How can we help you today?' />
           <button className='contact-btn'>Send</button>
-        </form>
+        </form>{' '}
       </div>
     </>
   );

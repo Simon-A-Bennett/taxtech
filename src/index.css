@@ -1,13 +1,11 @@
 * {
-  margin: 0;
-  padding: 0;
   font-family: 'Heebo';
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+
   background-color: #f3ede3;
 }
 
@@ -19,18 +17,14 @@ button.primary-btn {
   background-color: #ced7e0;
 }
 
-button.primary-btn:hover {
-  background-color: #708aa6;
-}
-
 nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  width: 100;
-  height: 120px;
+
+  height: 60px;
   background-color: #ced7e0;
   padding: 0 100px;
   border-bottom: 2px solid #000;
@@ -46,102 +40,88 @@ nav svg {
 
 header {
   margin-top: 60px;
-}
-
-header .header-container {
   display: flex;
-  justify-content: center;
-  gap: 200px;
-}
-
-header .text-container {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  align-content: center;
+  width: 100%;
+}
+
+header p {
+  font-weight: 700;
+  font-size: 30px;
   width: 500px;
-  height: 500px;
 }
 
-.text-container p {
-  font-size: 60px;
-}
-
-header .img-container {
-  display: flex;
-}
-
-.img-container img {
-  height: 500px;
-  width: 500px;
+header img {
+  width: 400px;
+  height: auto;
 }
 
 .grid-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 600px;
   background-color: #708aa6;
   margin-top: 200px;
+  width: 100%;
+  height: 300px;
   box-shadow: 0px -6px 8px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px -6px 8px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px -6px 8px -1px rgba(0, 0, 0, 0.75);
 }
 
 .contact-form-container {
-  background-color: #f3ede3;
-  height: 500px;
-  width: 500px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
+  align-content: center;
+  width: 50%;
+  gap: 10px;
+}
+.contact-form-container form {
+  width: 50%;
   gap: 10px;
 }
 
-.contact-form-container form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  gap: 5px;
+.contact-form-container h2 {
+  text-align: center;
 }
 
 .contact-form-container input {
   width: 300px;
-  height: 30px;
+  height: 20px;
   border: none;
   margin: 5px 0;
+  background-color: #f3ede3;
 }
 
 .contact-form-container textarea {
   width: 300px;
-  height: 100px;
+  height: 50px;
   border: none;
   margin: 5px 0;
   outline: none;
   resize: none;
   overflow: auto;
+  background-color: #f3ede3;
 }
 
 .contact-btn {
   width: 300px;
-  height: 40px;
-  border-radius: 20px;
+  height: 30px;
+  border-radius: 8px;
   border: 0;
-  background-color: #ced7e0;
-  margin: 10px;
+  background-color: #f3ede3;
   box-shadow: 1px -1px 14px -3px rgba(0, 0, 0, 0.67) inset;
   -webkit-box-shadow: 1px -1px 14px -3px rgba(0, 0, 0, 0.67) inset;
   -moz-box-shadow: 1px -1px 14px -3px rgba(0, 0, 0, 0.67) inset;
+  font-weight: 700;
 }
 
 .contact-btn:hover {
-  background-color: #708aa6;
+  background-color: #ced7e0;
 }
 
 .testimonial-container {
@@ -156,7 +136,7 @@ header .img-container {
 }
 
 .feedback h1 {
-  font-size: 50px;
+  font-size: 30px;
   margin-top: 100px;
   margin-bottom: 20px;
   text-align: center;
@@ -178,4 +158,11 @@ header .img-container {
   margin: 0 25px;
   font-weight: 700;
   font-size: 20px;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
 }

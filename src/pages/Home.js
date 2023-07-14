@@ -1,11 +1,13 @@
 import Grid from '../components/Grid';
 import Header from '../components/Header';
+import SocialFeed from '../components/SocialFeed';
 import Testimonials from '../components/Testimonials';
 
 const Home = ({ testimonials }) => {
   return (
     <div>
       <Header />
+      <SocialFeed />
       <div className='feedback'>
         <h1>Latest feedback</h1>
       </div>
@@ -14,7 +16,6 @@ const Home = ({ testimonials }) => {
           <Testimonials key={testimonial.id} testimonial={testimonial} />
         ))}
       </div>
-
       <Grid />
     </div>
   );
