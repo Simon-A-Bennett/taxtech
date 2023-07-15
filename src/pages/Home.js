@@ -4,13 +4,15 @@ import SocialFeed from '../components/SocialFeed';
 import Testimonials from '../components/Testimonials';
 import ContentBox from '../components/ContentBox';
 import office from '../assets/img/new-header.jpg';
+import Divider from '../components/Divider';
 
 const Home = ({ testimonials }) => {
   return (
     <div>
       <Header />
+      <Divider />
       <ContentBox source={office} alt={'office workers'}>
-        <p>Hello</p>
+        <p>Good morning!! This is just placeholder text</p>
       </ContentBox>
       {/* <SocialFeed /> */}
       <div className='feedback'></div>

@@ -9,7 +9,6 @@ html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #fff;
 }
 
 /* Shannon blue #37b7ff */
@@ -57,21 +56,21 @@ nav .nav-links-container {
   box-shadow: 0px 6px 8px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 6px 8px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 6px 8px -1px rgba(0, 0, 0, 0.75);
-  animation: fadeIn 2s;
 }
 
 @keyframes fadeIn {
   5% {
-    opacity: 0;
+    opacity: 50%;
   }
   100% {
-    opacity: 1;
+    opacity: 100%;
   }
 }
 
 nav .nav-links span {
   margin: 10px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
   color: #000;
   margin-bottom: 5px;
   cursor: pointer;
@@ -88,6 +87,10 @@ nav svg {
   height: 60px;
 }
 
+nav svg:hover {
+  width: 45px;
+}
+
 nav .tiktok {
   fill: #ee1d52;
 }
@@ -100,13 +103,16 @@ nav .twitter {
   fill: #3399ff;
 }
 
+nav .instagram {
+}
+
 nav .instagram a {
   text-decoration: none;
 }
 
 nav h3 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 header {

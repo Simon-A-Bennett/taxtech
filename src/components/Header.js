@@ -9,7 +9,7 @@ const Header = () => {
           <h2>TaxTech Enterprises</h2>
           <ul>
             <li>
-              <p>Dedicated to providing research and development</p>{' '}
+              <p>Dedicated to providing research and development</p>
             </li>
             <li>
               <p>Research and Development Tax Claims</p>
