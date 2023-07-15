@@ -1,8 +1,9 @@
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
 import Nav from './components/Nav';
-import { useEffect, useState } from 'react';
+import Home from './pages/Home';
+import Footer from './components/Footer';
 
 function App() {
   const [testimonials, setTestimonials] = useState(null);
@@ -31,6 +32,7 @@ function App() {
           <Route path='/' element={<Home testimonials={testimonials} />} />
         </Routes>
       </BrowserRouter>
+      {/* <Footer /> */}
     </div>
   );
 }
