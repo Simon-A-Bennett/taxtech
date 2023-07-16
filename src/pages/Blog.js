@@ -1,12 +1,10 @@
 import BlogItems from '../components/BlogItems';
 
-const Blog = ({ posts }) => {
+const Blog = ({ posts, setPost }) => {
   return (
-    <div className='post-container'>
+    <div className='posts-container'>
       {posts?.map((post) => (
-        <div className='post'>
-          <BlogItems post={post} />
-        </div>
+        <BlogItems setPost={setPost} key={post.id} post={post} />
       ))}
     </div>
   );

@@ -5,20 +5,25 @@ import Nav from './ui/Nav';
 import Home from './pages/Home';
 import Footer from './ui/Footer';
 import Blog from './pages/Blog';
+import Post from './pages/Post';
+import SocialFeed from './components/SocialFeed';
 
 function App() {
-  const [testimonials, setTestimonials] = useState(null);
-  const [posts, setPosts] = useState(null);
+  // const [testimonials, setTestimonials] = useState(null);
 
-  const getTestimonials = async () => {
-    try {
-      const response = await fetch(`http://localhost:3000/testimonials?`);
-      const data = await response.json();
-      setTestimonials(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const [posts, setPosts] = useState(null);
+  const [post, setPost] = useState(null);
+  const [socialOpen, setSocialOpen] = useState(false);
+
+  // const getTestimonials = async () => {
+  //   try {
+  //     const response = await fetch(`http://localhost:3000/testimonials?`);
+  //     const data = await response.json();
+  //     setTestimonials(data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   const getPosts = async () => {
     try {
@@ -31,7 +36,7 @@ function App() {
   };
 
   useEffect(() => {
-    getTestimonials();
+    // getTestimonials();
     getPosts();
   }, []);
 
@@ -40,8 +45,24 @@ function App() {
       <Nav />
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home testimonials={testimonials} />} />
-          <Route path='/blog' element={<Blog posts={posts} />} />
+          <Route
+            path='/'
+            element={
+              <Home socialOpen={socialOpen} setSocialOpen={setSocialOpen} />
+            }
+          />
+          <Route
+            path='/blog'
+            element={
+              <Blog
+                post={post}
+                getPosts={getPosts}
+                setPost={setPost}
+                posts={posts}
+              />
+            }
+          />
+          <Route path={`/post`} element={<Post post={post} />} />
         </Routes>
       </BrowserRouter>
       <Footer />

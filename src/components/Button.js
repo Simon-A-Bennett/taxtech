@@ -1,7 +1,12 @@
-const Button = ({ text }) => {
+const Button = ({ bgColor, link, children }) => {
   return (
     <>
-      <button className='btn-component'>{text}</button>
+      <button
+        className='btnComponent'
+        style={{ backgroundColor: `${bgColor}` }}
+      >
+        {children}
+      </button>
     </>
   );
 };

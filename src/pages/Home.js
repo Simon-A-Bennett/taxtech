@@ -6,7 +6,7 @@ import ContentBox from '../components/ContentBox';
 import office from '../assets/img/new-header.jpg';
 import Divider from '../components/Divider';
 
-const Home = ({ testimonials }) => {
+const Home = ({ testimonials, socialOpen, setSocialOpen }) => {
   return (
     <div>
       <Header />
@@ -14,8 +14,11 @@ const Home = ({ testimonials }) => {
       <ContentBox source={office} alt={'office workers'}>
         <p>Good morning!! This is just placeholder text</p>
       </ContentBox>
-      {/* <SocialFeed /> */}
+
+      <SocialFeed socialOpen={socialOpen} setSocialOpen={setSocialOpen} />
+
       <div className='feedback'></div>
+
       {/* <div className='testimonial-container'>
         {testimonials?.map((testimonial) => (
           <Testimonials key={testimonial.id} testimonial={testimonial} />
