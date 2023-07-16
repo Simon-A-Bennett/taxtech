@@ -1,5 +1,5 @@
 import NavLinks from './NavLinks';
-import SocialIcons from './SocialIcons';
+import SocialIcons from '../components/SocialIcons';
 
 const Nav = () => {
   return (

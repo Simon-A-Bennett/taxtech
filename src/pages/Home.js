@@ -1,5 +1,5 @@
-import Grid from '../components/Footer';
-import Header from '../components/Header';
+import Grid from '../ui/Footer';
+import Header from '../ui/Header';
 import SocialFeed from '../components/SocialFeed';
 import Testimonials from '../components/Testimonials';
 import ContentBox from '../components/ContentBox';

@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Nav from './components/Nav';
+import Nav from './ui/Nav';
 import Home from './pages/Home';
-import Footer from './components/Footer';
+import Footer from './ui/Footer';
+import Blog from './pages/Blog';
 
 function App() {
   const [testimonials, setTestimonials] = useState(null);
+  const [posts, setPosts] = useState(null);
 
   const getTestimonials = async () => {
     try {
@@ -18,11 +20,20 @@ function App() {
     }
   };
 
+  const getPosts = async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/posts?`);
+      const data = await response.json();
+      setPosts(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     getTestimonials();
+    getPosts();
   }, []);
-
-  console.log(testimonials);
 
   return (
     <div>
@@ -30,9 +41,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home testimonials={testimonials} />} />
+          <Route path='/blog' element={<Blog posts={posts} />} />
         </Routes>
       </BrowserRouter>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

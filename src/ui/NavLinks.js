@@ -2,9 +2,13 @@ const NavLinks = () => {
   return (
     <div className='nav-links-container'>
       <div className='nav-links'>
-        <span>Home</span>
+        <a href='http://localhost:3001/'>
+          <span>Home</span>
+        </a>
         <span>Services</span>
-        <span>Blog</span>
+        <a href='http://localhost:3001/blog'>
+          <span>Blog</span>
+        </a>
         <span>About</span>
         <span>Contact</span>
       </div>
