@@ -204,7 +204,7 @@ header .header-text-container p {
 .social-feed-container {
   display: grid;
   justify-content: center;
-  gap: 5px;
+  row-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(100px, 375px));
   grid-template-rows: repeat(auto-fit, minmax(100px, 375px));
   /* grid-template-columns: 335px 335px 335px;
@@ -227,20 +227,20 @@ header .header-text-container p {
   grid-row-start: 2;
 }
 
-#artdeco-global-alert-container::-webkit-scrollbar-thumb {
-  background-color: coral; /* color of the scroll thumb */
+.li-embedded::-webkit-scrollbar-thumb {
+  background-color: #37b7ff; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 1px solid black; /* creates padding around scroll thumb */
 }
 
-.scroll::-webkit-scrollbar-track {
-  background-color: whitesmoke; /* color of the scroll thumb */
+.li-embedded::-webkit-scrollbar-track {
+  background-color: #03a9f4; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 2px solid black; /*creates padding around scroll thumb */
 }
 
-.scroll::-webkit-scrollbar {
-  background-color: black; /* color of the scroll thumb */
+.li-embedded ::-webkit-scrollbar {
+  background-color: #37b7ff; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid black; /* creates padding around scroll thumb */
 }

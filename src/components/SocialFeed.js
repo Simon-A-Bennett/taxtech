@@ -20,7 +20,13 @@ const SocialFeed = ({ socialOpen, setSocialOpen }) => {
         <div className='social-feed-container'>
           <div
             className='fb-embedded'
-            style={{ display: 'flex', justifyContent: 'center' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              '&::-webkit-scrollbar': {
+                backgroundColor: 'black',
+              },
+            }}
           >
             <FacebookEmbed
               url='https://www.facebook.com/andrewismusic/posts/451971596293956'
@@ -34,18 +40,27 @@ const SocialFeed = ({ socialOpen, setSocialOpen }) => {
             <TwitterEmbed
               style={{
                 maxWidth: 330,
+                overflowY: 'scroll',
+                border: 'none',
               }}
-              url='https://twitter.com/PixelAndBracket/status/1356633038717923333'
+              url='https://twitter.com/CosmicSprngJWST/status/1554261442148311042'
               width='100%'
+              border='none'
             />
           </div>
           <div
             className='ig-embedded'
-            style={{ display: 'flex', justifyContent: 'center' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              border: 'none',
+            }}
           >
             <InstagramEmbed
               url='https://www.instagram.com/taxtechltd/'
               width={330}
+              border={`none`}
+              webkit-scrollbar={`background-color: black`}
             />
           </div>
           <div
@@ -53,20 +68,24 @@ const SocialFeed = ({ socialOpen, setSocialOpen }) => {
             style={{ display: 'flex', justifyContent: 'center' }}
           >
             <TikTokEmbed
-              url='https://www.tiktok.com/@epicgardening/video/7055411162212633903'
+              url='https://www.tiktok.com/@astro_alexandra/video/7119250319762050347'
               width={330}
+              border={'none'}
             />
           </div>
           <div
             className='li-embedded'
-            style={{ display: 'flex', justifyContent: 'center' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
           >
             <LinkedInEmbed
-              className='scroll'
               url='https://www.linkedin.com/embed/feed/update/urn:li:share:6898694772484112384'
               postUrl='https://www.linkedin.com/posts/peterdiamandis_5-discoveries-the-james-webb-telescope-will-activity-6898694773406875648-z-D7'
               width={330}
               height={350}
+              border={'none'}
             />
           </div>
         </div>
