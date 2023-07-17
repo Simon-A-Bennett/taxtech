@@ -38,7 +38,7 @@ const ContentBox = ({ source, alt, children }) => {
   const childrenContent = {
     color: '#fff',
     animation: 'fadeIn 2s',
-    fontSize: '25px',
+    fontSize: '35px',
     padding: '5px',
     textAlign: 'center',
   };

@@ -9,16 +9,16 @@ const Header = () => {
           <h2>TaxTech Enterprises</h2>
           <ul>
             <li>
-              <p>Dedicated to providing research and development</p>
+              <p>Dedicated to Providing Research and Development</p>
             </li>
             <li>
               <p>Research and Development Tax Claims</p>
             </li>
             <li>
-              <p>Provide and enhance digital marketing </p>
+              <p>Provide and Enhance Digital Marketing </p>
             </li>
             <li>
-              <p>Content creation for social media and business promotion</p>
+              <p>Content Creation for Social Media and Business Promotion</p>
             </li>
           </ul>
         </div>

@@ -35,7 +35,11 @@ const SocialFeed = ({ socialOpen, setSocialOpen }) => {
           </div>
           <div
             className='tw-embedded'
-            style={{ display: 'flex', justifyContent: 'center' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              border: 'none',
+            }}
           >
             <TwitterEmbed
               style={{
@@ -45,7 +49,6 @@ const SocialFeed = ({ socialOpen, setSocialOpen }) => {
               }}
               url='https://twitter.com/CosmicSprngJWST/status/1554261442148311042'
               width='100%'
-              border='none'
             />
           </div>
           <div
@@ -54,13 +57,13 @@ const SocialFeed = ({ socialOpen, setSocialOpen }) => {
               display: 'flex',
               justifyContent: 'center',
               border: 'none',
+              height: 375,
+              overflowY: 'scroll',
             }}
           >
             <InstagramEmbed
-              url='https://www.instagram.com/taxtechltd/'
+              url='https://www.instagram.com/p/Cul-NQtuRSu/'
               width={330}
-              border={`none`}
-              webkit-scrollbar={`background-color: black`}
             />
           </div>
           <div
@@ -81,6 +84,7 @@ const SocialFeed = ({ socialOpen, setSocialOpen }) => {
             }}
           >
             <LinkedInEmbed
+              className='li-embedded'
               url='https://www.linkedin.com/embed/feed/update/urn:li:share:6898694772484112384'
               postUrl='https://www.linkedin.com/posts/peterdiamandis_5-discoveries-the-james-webb-telescope-will-activity-6898694773406875648-z-D7'
               width={330}

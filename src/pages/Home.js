@@ -12,7 +12,9 @@ const Home = ({ testimonials, socialOpen, setSocialOpen }) => {
       <Header />
       <Divider />
       <ContentBox source={office} alt={'office workers'}>
-        <p>Good morning!! This is just placeholder text</p>
+        <p>
+          Good morning everyone!! <span>🌞</span>{' '}
+        </p>
       </ContentBox>
 
       <SocialFeed socialOpen={socialOpen} setSocialOpen={setSocialOpen} />
