@@ -18,13 +18,6 @@ const Home = ({ testimonials, socialOpen, setSocialOpen }) => {
       </ContentBox>
 
       <SocialFeed socialOpen={socialOpen} setSocialOpen={setSocialOpen} />
-
-      <div className='feedback'></div>
-
-      {/* <div className='testimonial-container'>
-        {testimonials?.map((testimonial) => (
-          <Testimonials key={testimonial.id} testimonial={testimonial} />
-        ))} */}
     </div>
   );
 };

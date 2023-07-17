@@ -10,7 +10,10 @@ const NavLinks = () => {
           <span>Blog</span>
         </a>
         <span>About</span>
-        <span>Contact</span>
+        <a href='#contact'>
+          {' '}
+          <span>Contact</span>
+        </a>
       </div>
     </div>
   );
