@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { FacebookEmbed } from 'react-social-media-embed';
 import { InstagramEmbed } from 'react-social-media-embed';
 import { LinkedInEmbed } from 'react-social-media-embed';
 import { TikTokEmbed } from 'react-social-media-embed';
 import { TwitterEmbed } from 'react-social-media-embed';
 
-const SocialFeed = ({ socialOpen, setSocialOpen }) => {
+const SocialFeed = () => {
+  const [socialOpen, setSocialOpen] = useState();
+
   const onShowSocials = () => {
     setSocialOpen((socialOpen) => !socialOpen);
   };
