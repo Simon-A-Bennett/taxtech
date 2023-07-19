@@ -1,12 +1,12 @@
-import BlogItems from '../components/BlogItems';
+import { Outlet } from 'react-router';
 
-const Blog = ({ posts, setPost }) => {
+const Blog = () => {
   return (
-    <div className='posts-container'>
-      {posts?.map((post) => (
-        <BlogItems setPost={setPost} key={post.id} post={post} />
-      ))}
-    </div>
+    <>
+      <div className='posts-container'>
+        <Outlet />
+      </div>
+    </>
   );
 };
 export default Blog;

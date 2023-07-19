@@ -1,57 +1,38 @@
-import { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from 'react-router-dom';
 
-import Nav from './ui/Nav';
 import Home from './pages/Home';
-import Footer from './ui/Footer';
 import Blog from './pages/Blog';
-import Post from './pages/Post';
+import BlogPostPage, { loader as blogPostLoader } from './pages/BlogPostPage';
+import BlogPosts, { loader as blogPostsLoader } from './pages/BlogPosts';
+import CreatePost from './pages/CreatePost';
+import RootLayout from './pages/RootLayout';
 
 function App() {
-  const [posts, setPosts] = useState(null);
-  const [post, setPost] = useState(null);
-  const [socialOpen, setSocialOpen] = useState(false);
-
-  const getPosts = async () => {
-    try {
-      const response = await fetch(`http://localhost:3000/posts?`);
-      const data = await response.json();
-      setPosts(data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  useEffect(() => {
-    getPosts();
-  }, []);
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path='/blog' element={<Blog />}>
+          <Route index element={<BlogPosts />} loader={blogPostsLoader} />
+          <Route
+            path=':id/:title'
+            element={<BlogPostPage />}
+            loader={blogPostLoader}
+          />
+        </Route>
+        <Route path={`/create-post`} element={<CreatePost />} />
+      </Route>
+    )
+  );
 
   return (
     <div>
-      <Nav />
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path='/'
-            element={
-              <Home socialOpen={socialOpen} setSocialOpen={setSocialOpen} />
-            }
-          />
-          <Route
-            path='/blog'
-            element={
-              <Blog
-                post={post}
-                getPosts={getPosts}
-                setPost={setPost}
-                posts={posts}
-              />
-            }
-          />
-          <Route path={`/post`} element={<Post post={post} />} />
-        </Routes>
-      </BrowserRouter>
-      <Footer />
+      <RouterProvider router={router} />
     </div>
   );
 }

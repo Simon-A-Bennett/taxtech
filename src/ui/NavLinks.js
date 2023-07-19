@@ -1,19 +1,18 @@
+import { NavLink } from 'react-router-dom';
+
 const NavLinks = () => {
   return (
     <div className='nav-links-container'>
       <div className='nav-links'>
-        <a href='http://localhost:3001/'>
+        <NavLink to='/'>
           <span>Home</span>
-        </a>
+        </NavLink>
         <span>Services</span>
-        <a href='http://localhost:3001/blog'>
+        <NavLink to='/blog'>
           <span>Blog</span>
-        </a>
+        </NavLink>
         <span>About</span>
-        <a href='#contact'>
-          {' '}
-          <span>Contact</span>
-        </a>
+        <span>Contact</span>
       </div>
     </div>
   );
