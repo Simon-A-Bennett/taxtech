@@ -16,8 +16,10 @@ const Post = () => {
           </span>
           <h1 className='post-title'>{postData.title}</h1>
           <p className='post-body'>{postData.body}</p>
-          <p>
-            <strong>Tags:</strong> {postData.tags.join(', ')}
+          <p className='post-tags'>
+            <strong>
+              Tags: <em className='post-tag'>{postData.tags.join(', ')}</em>
+            </strong>
           </p>
         </>
       </div>
@@ -28,6 +30,5 @@ export default Post;
 
 export function loader({ params }) {
   const postId = params.id;
-  const postTitle = params.title;
-  return blogPost(postId, postTitle);
+  return blogPost(postId);
 }

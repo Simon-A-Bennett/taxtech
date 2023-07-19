@@ -405,10 +405,28 @@ header .header-text-container p {
   -webkit-background-clip: text;
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
+  margin-top: 40px;
 }
 
 .post-body {
   font-size: 20px;
+  margin: 50px;
+}
+
+.post-tags {
+  color: #03a9f4;
+  background-image: -webkit-linear-gradient(45deg, #03a9f4 0%, #dddddd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.post-tag {
+  text-transform: uppercase;
 }
 
 /* # Create post  */
