@@ -1,24 +1,42 @@
-import headerPic from '../assets/img/header1.png';
+import { Balancer } from 'react-wrap-balancer';
+import headerPic from '../assets/img/a.jpg';
 
 const Header = () => {
   return (
     <>
       <header>
-        <img src={headerPic} alt='people in office' />
+        <div>
+          {' '}
+          <img src={headerPic} alt='people in office' />{' '}
+        </div>
         <div className='header-text-container'>
-          <h2>TaxTech Enterprises</h2>
+          <h2>
+            <Balancer> TaxTech Enterprises</Balancer>
+          </h2>
           <ul>
             <li>
-              <p>Dedicated to Providing Research and Development</p>
+              <p>
+                <Balancer>
+                  Dedicated to Providing Research and Development
+                </Balancer>
+              </p>
             </li>
             <li>
-              <p>Research and Development Tax Claims</p>
+              <p>
+                <Balancer>Research and Development Tax </Balancer>
+              </p>
             </li>
             <li>
-              <p>Provide and Enhance Digital Marketing </p>
+              <p>
+                <Balancer> Providing and Enhancing Digital Marketing</Balancer>
+              </p>
             </li>
             <li>
-              <p>Content Creation for Social Media and Business Promotion</p>
+              <p>
+                <Balancer>
+                  Content Creation for Social Media and Business Promotion
+                </Balancer>
+              </p>
             </li>
           </ul>
         </div>

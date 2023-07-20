@@ -1,4 +1,4 @@
-const ContentBox = ({ source, alt, children }) => {
+const ContentBox = ({ source, alt, children, fontSize = '35px' }) => {
   // * reusable standalone contentBox component, using a two column grid for an image on the left and text on the right
 
   // * image src and alt are passed in via the source and alt props
@@ -13,7 +13,7 @@ const ContentBox = ({ source, alt, children }) => {
     display: 'grid',
     justifyContent: 'center',
     gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-    backgroundColor: '#37b7ff',
+    background: 'linear-gradient(45deg, #03a9f4 0%, #dddddd 100%)',
     width: '100%',
     margin: 0,
   };
@@ -38,7 +38,7 @@ const ContentBox = ({ source, alt, children }) => {
   const childrenContent = {
     color: '#fff',
     animation: 'fadeIn 2s',
-    fontSize: '35px',
+    fontSize: `${fontSize}`,
     padding: '5px',
     textAlign: 'center',
   };

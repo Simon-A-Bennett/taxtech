@@ -1,17 +1,18 @@
 export const postsLoader = async () => {
-  try {
-    const response = await fetch(`http://localhost:3000/posts`);
-    return response.json();
-  } catch (error) {
-    console.log(error);
+  const response = await fetch(`http://localhost:3000/posts`);
+
+  if (!response.ok) {
+    throw { message: 'Failed to fetch posts.', status: 500 };
   }
+
+  return response.json();
 };
 
 export const postLoader = async (id) => {
-  try {
-    const response = await fetch(`http://localhost:3000/posts/${id}`);
-    return response.json();
-  } catch (error) {
-    console.error(error);
+  const response = await fetch(`http://localhost:3000/posts/` + id);
+  if (!response.ok) {
+    throw { message: 'Failed to fetch post.', status: 500 };
   }
+
+  return response.json();
 };

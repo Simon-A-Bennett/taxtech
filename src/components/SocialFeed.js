@@ -26,7 +26,7 @@ const SocialFeed = () => {
             style={{
               display: 'flex',
               justifyContent: 'center',
-              '&::-webkit-scrollbar': {
+              '&::WebkitScrollbar': {
                 backgroundColor: 'black',
               },
             }}

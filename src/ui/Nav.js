@@ -8,9 +8,7 @@ const Nav = () => {
         <h3>TaxTech Enterprises</h3>
       </div>
       <NavLinks />
-      <div>
-        <SocialIcons />
-      </div>
+      <div>{/* <SocialIcons /> */}</div>
     </nav>
   );
 };
